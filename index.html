@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pradumn Landge E-Commerce Store</title>
+  <link rel="stylesheet" href="shop.css">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <style>
+    /* CSS for poster image */
+    .poster {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Adjust header style to fit with poster image */
+    header {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Style for the logo image: make it circular */
+    .logo-img {
+      width: 65px; /* Adjust logo size */
+      height: 65px; /* Set height equal to width for circular shape */
+      border-radius: 50%; /* Make the image circular */
+      margin-right: 10px; /* Space between logo and text */
+      object-fit: cover; /* Ensure the image fits well in the circle */
+      vertical-align: middle;
+    }
+
+    /* Container styles */
+    .container {
+      padding: 20px;
+    }
+
+    .shop-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .food-box {
+      width: 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .food-img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .food-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .food-price {
+      color: green;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    ion-icon.add-cart {
+      cursor: pointer;
+      font-size: 24px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Poster image section -->
+  <header>
+    <!-- Full-width Poster -->
+    <img src="poster.png" alt="Business Poster" class="poster">
+    
+    <div class="nav">
+      <a href="#" class="logo">
+        <!-- Add the circular logo before the name -->
+        <img src="logo 3.png" alt="Logo" class="logo-img">
+        TrendBuy
+      </a>
+
+      <div class="box">
+        <div class="cart-count">0</div>
+        <ion-icon name="cart" id="cart-icon"></ion-icon>
+      </div>
+
+      <div class="cart">
+        <div class="cart-title">Cart Items</div>
+        <div class="cart-content">
+          <!-- Cart items will be dynamically added here -->
+        </div>
+
+        <div class="total">
+          <div class="total-title">Total</div>
+          <div class="total-price">Rs.0</div>
+        </div>
+
+        <button class="btn-buy">Place Order</button>
+
+        <ion-icon name="close" id="cart-close"></ion-icon>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2 class="title">Discover the Best Collections</h2>
+    <div class="shop-content">
+      <!-- First row of products -->
+      <div class="food-box">
+        <div class="pic">
+          <img src="iPhone16.jpg" class="food-img">
+        </div>
+        <h2 class="food-title">iPhone 16 Pro Max</h2>
+        <span class="food-price">Rs.1,22,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="s24.jpg" class="food-img"></div>
+        <h2 class="food-title">Galaxy S24 ultra</h2>
+        <span class="food-price">Rs.1,11,111</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="google-pixel-9.avif" class="food-img"></div>
+        <h2 class="food-title">Google Pixel 9 pro</h2>
+        <span class="food-price">Rs.1,05,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="pixel 9 pro fold.png" class="food-img"></div>
+        <h2 class="food-title">Google Pixel 9 pro Fold</h2>
+        <span class="food-price">Rs.1,59,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <!-- Second row of products -->
+      <div class="food-box">
+        <div class="pic"><img src="galaxy flip4.png" class="food-img"></div>
+        <h2 class="food-title">Samsung Galaxy Z Flip4</h2>
+        <span class="food-price">Rs.1,21,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Nike terrascount.png" class="food-img"></div>
+        <h2 class="food-title">Nike terrascount</h2>
+        <span class="food-price">Rs.7,400</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="ZARA T-SHIRT BLACK.png" class="food-img"></div>
+        <h2 class="food-title">zara T-shirt</h2>
+        <span class="food-price">Rs.2,100</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Nike Pantam Luma.png" class="food-img"></div>
+        <h2 class="food-title">Nike Pantam Luma</h2>
+        <span class="food-price">Rs.21,111</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <!-- Third row of products (duplicates for more rows) -->
+      <div class="food-box">
+        <div class="pic"><img src="Nike Phantan High 2.png" class="food-img"></div>
+        <h2 class="food-title">Nike Phantan High 2</h2>
+        <span class="food-price">Rs.14,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Watch Jacob&Co Astronomia.png" class="food-img"></div>
+        <h2 class="food-title">Jacob&Co Astronomia</h2>
+        <span class="food-price">Rs.25,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Watch White Gold Limited Edition Diamond.png" class="food-img"></div>
+        <h2 class="food-title">Watch White Gold Limited Edition Diamond</h2>
+        <span class="food-price">Rs.99,55,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Jacob & Co Epic X Chrono.png" class="food-img"></div>
+        <h2 class="food-title">Jacob & Co Epic X Chrono</h2>
+        <span class="food-price">Rs.20,59,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <!-- Additional rows of duplicate products -->
+      <div class="food-box">
+        <div class="pic"><img src="Rolex Mens Datejust.png" class="food-img"></div>
+        <h2 class="food-title">Rolex Mens Datejust</h2>
+        <span class="food-price">Rs.30,00,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Aero Armour.png" class="food-img"></div>
+        <h2 class="food-title">T-shirt</h2>
+        <span class="food-price">Rs.999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Men Casual Jacket.png" class="food-img"></div>
+        <h2 class="food-title">Men Casual Jacket</h2>
+        <span class="food-price">Rs.555</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Round Neck Multicolor Sweater.png" class="food-img"></div>
+        <h2 class="food-title">Round Neck Multicolor Sweater</h2>
+        <span class="food-price">Rs.450</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Casual Shirt.png" class="food-img"></div>
+        <h2 class="food-title">Casual Shirt</h2>
+        <span class="food-price">Rs.300</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Cotton Grey T-Shirt.png" class="food-img"></div>
+        <h2 class="food-title">Cotton Grey T-Shirt</h2>
+        <span class="food-price">Rs.1010</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="White T-Shirt.png" class="food-img"></div>
+        <h2 class="food-title">White T-Shirt</h2>
+        <span class="food-price">Rs.444</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Galaxy S23 FE.png" class="food-img"></div>
+        <h2 class="food-title"> Galaxy S23 FE</h2>
+        <span class="food-price">Rs.30,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <!-- Additional new products -->
+      <div class="food-box">
+        <div class="pic"><img src="Apple iPhone 16.png" class="food-img"></div>
+        <h2 class="food-title">Apple iPhone 16</h2>
+        <span class="food-price">Rs.51,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Apple iPhone 15.png" class="food-img"></div>
+        <h2 class="food-title">Apple iPhone 15</h2>
+        <span class="food-price">Rs.51,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="DELL XPS 13.png" class="food-img"></div>
+        <h2 class="food-title">Dell XPS 13</h2>
+        <span class="food-price">Rs.1,20,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Apple 2024 iPad Pro.png" class="food-img"></div>
+        <h2 class="food-title">Apple 2024 iPad Pro </h2>
+        <span class="food-price">Rs.89,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="SONY WH1000XM4.png" class="food-img"></div>
+        <h2 class="food-title">Sony WH-1000XM5</h2>
+        <span class="food-price">Rs.34,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Bose QUIETCOMFORT EARBUDS.png" class="food-img"></div>
+        <h2 class="food-title">Bose QuietComfort 45</h2>
+        <span class="food-price">Rs.37,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Apple Watch Series 8.png" class="food-img"></div>
+        <h2 class="food-title">Apple Watch Series 8</h2>
+        <span class="food-price">Rs.45,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="GARMIN Forerunner 45.png" class="food-img"></div>
+        <h2 class="food-title">Garmin Forerunner 245</h2>
+        <span class="food-price">Rs.24,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Ultraboost Shoes.png" class="food-img"></div>
+        <h2 class="food-title">Adidas Ultraboost</h2>
+        <span class="food-price">Rs.15,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="RS-X Mix Sneakers.png" class="food-img"></div>
+        <h2 class="food-title">Puma RS-X</h2>
+        <span class="food-price">Rs.14,499</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="HP Pavilion Intel.png" class="food-img"></div>
+        <h2 class="food-title">HP Pavilion 15</h2>
+        <span class="food-price">Rs.70,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Lenovo ThinkPad E14.png" class="food-img"></div>
+        <h2 class="food-title">Lenovo ThinkPad X1</h2>
+        <span class="food-price">Rs.1,40,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="ASUS ROG Strix G16.png" class="food-img"></div>
+        <h2 class="food-title">Asus ROG Zephyrus G14</h2>
+        <span class="food-price">Rs.1,50,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="LG UltraWide 124.46 cm.png" class="food-img"></div>
+        <h2 class="food-title">LG UltraWide 124.46 cm</h2>
+        <span class="food-price">Rs.45,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="LG UltraGear 68.58 cm.png" class="food-img"></div>
+        <h2 class="food-title">LG UltraGear 68.58 cm</h2>
+        <span class="food-price">Rs.35,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Bose SOUNDLINK REVOLVE Plus.png" class="food-img"></div>
+        <h2 class="food-title">Bose SOUNDLINK REVOLVE Plus </h2>
+        <span class="food-price">Rs.19,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="JBL Charge 5.png" class="food-img"></div>
+        <h2 class="food-title">JBL Charge 5</h2>
+        <span class="food-price">Rs.14,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Speeqo Charger Dock.png" class="food-img"></div>
+        <h2 class="food-title">Fitbit Charge 5</h2>
+        <span class="food-price">Rs.555</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Oculus Quest 2.png" class="food-img"></div>
+        <h2 class="food-title">Oculus Quest 2</h2>
+        <span class="food-price">Rs.34,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="NINTENDO Switch OLED.png" class="food-img"></div>
+        <h2 class="food-title">Nintendo Switch</h2>
+        <span class="food-price">Rs.29,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="SONY PlayStation5.png" class="food-img"></div>
+        <h2 class="food-title">Sony PlayStation 5</h2>
+        <span class="food-price">Rs.49,999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="Ant Esports GP325.png" class="food-img"></div>
+        <h2 class="food-title">Ant Esports GP325 </h2>
+        <span class="food-price">Rs.999</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="DELL AMD Ryzen 7.png" class="food-img"></div>
+        <h2 class="food-title">DELL AMD Ryzen 7</h2>
+        <span class="food-price">Rs.50,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="X-Ray 3 Casuals.png" class="food-img"></div>
+        <h2 class="food-title">X-Ray 3 Casuals</h2>
+        <span class="food-price">Rs.1,500</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+
+      <div class="food-box">
+        <div class="pic"><img src="ALIENWARE Intel Core i7.png" class="food-img"></div>
+        <h2 class="food-title">ALIENWARE Intel Core i7</h2>
+        <span class="food-price">Rs.1,20,000</span>
+        <ion-icon name="cart" class="add-cart"></ion-icon>
+      </div>
+    </div>
+  </div>
+  <script src="shop.js"></script>
+</body>
+</html>
